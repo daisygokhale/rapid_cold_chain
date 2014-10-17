@@ -1,0 +1,57 @@
+<html>
+	<head>
+		<style>
+		    @page {
+		        -pdf-page-size: letter;
+
+		        @frame header_frame {           /* Static Frame */
+		            -pdf-frame-content: header_content;
+		            left: 50pt; width: 512pt; top: 50pt; height: 60pt;
+		            border: 0pt solid white;
+		        }
+
+		        @frame content_frame {          /* Content Frame */
+		            left: 50pt; width: 512pt; top: 110pt; height: 612pt;
+		            border: 0pt solid white;
+		        }
+		        
+		        @frame footer_frame {           /* Another static Frame */
+		            -pdf-frame-content: footer_content;
+		            left: 50pt; width: 512pt; top: 722pt; height: 20pt;
+		            border: 0pt solid white;
+		        }
+		    }
+
+		    #header_content {
+		    	padding: 2px;
+		    	font-size: 12pt;
+		    	background-color: #B5B5B5;
+		    }
+
+		    #title {
+		    	font-size: 16pt;
+		    }
+		    #footer_content {
+		    	text-align: right;
+		    }
+		    
+		</style>
+	</head>
+	<body>
+		<div id="header_content">
+			<span id='title'>Lao SMS Immunization Manager</span><br>
+			<span id='district'>{{ district_name }}</span><br>
+			<span id='date'>{{ date }}</span>
+		</div>
+		<!-- <span style='color:pink;background-color:black;font-size:50px;'>{{data}}</span> -->
+		<table>
+			<tbody>
+
+			</tbody>
+		</table>
+
+		<div id="footer_content">
+			Page <pdf:pagenumber> of <pdf:pagecount>
+		</div>
+	</body>
+</html>
