@@ -39,19 +39,16 @@
 	</head>
 	<body>
 		<div id="header_content">
-			<span id='title'>Lao SMS Immunization Manager</span><br>
-			<span id='district'>{{ district_name }}</span><br>
+			<span id='title'>Lao SMS Immunization Manager</span><br />
+			<span id='district'>{{ district_name }}</span><br />
 			<span id='date'>{{ date }}</span>
 		</div>
-		<!-- <span style='color:pink;background-color:black;font-size:50px;'>{{data}}</span> -->
-		<table>
-			<tbody>
-
-			</tbody>
-		</table>
-
+		
 		<div id="footer_content">
 			Page <pdf:pagenumber> of <pdf:pagecount>
 		</div>
+
+		{% block content %}{% endblock %}
+		hahahah
 	</body>
 </html>
